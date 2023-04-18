@@ -1,6 +1,6 @@
-package net.ukr.hliznutsa;
+package net.hliznutsa.hw2;
 
-import static net.ukr.hliznutsa.Car.start;
+import static net.hliznutsa.hw2.Car.start;
 
 public class Main {
     public static void main(String[] args) {

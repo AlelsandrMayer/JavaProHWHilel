@@ -1,4 +1,4 @@
-package net.ukr.hliznutsa;
+package net.hliznutsa.hw2;
 
 public class Employee {
     private String fullName;
