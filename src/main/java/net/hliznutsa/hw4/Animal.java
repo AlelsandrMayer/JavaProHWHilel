@@ -1,4 +1,4 @@
-package net.hliznutsa.hw3;
+package net.hliznutsa.hw4;
 
 public class Animal {
     protected String name;
