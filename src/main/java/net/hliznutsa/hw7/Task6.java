@@ -9,13 +9,14 @@ public class Task6 {
         Scanner scanner = new Scanner(System.in);
 
         String[] words = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot", "cherry",
-                "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", " pea", "peanut",
+                "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut",
                 "pear", "pepper", "pineapple", "pumpkin", "potato"};
 
         System.out.println("Привествуем в игре 'УГАДАЙ СЛОВО', игра продолжается пока слово не будет угадано. \n Ваше слово: \n");
 
         int randomNumber = random.nextInt(words.length);
         String randomWord = words[randomNumber];
+        StringBuilder hint = new StringBuilder("###############");
         String userWord;
 
         do {
@@ -25,8 +26,12 @@ public class Task6 {
             } else if (userWord.equals(randomWord)) {
                 System.out.println("ПОБЕДА!!! Вы угадали.");
             } else {
-                System.out.println("Неудача :( Попробуйте ввести слово ещё раз. \nПодсказка: загаданное слово начинается  так: "
-                        + randomWord.charAt(0) + randomWord.charAt(1) + "###############");
+                for (int i = 0; i < userWord.length() && i < randomWord.length(); i++) {
+                    if (userWord.charAt(i) == randomWord.charAt(i)) {
+                        hint.setCharAt(i, randomWord.charAt(i));
+                    }
+                }
+                System.out.println("Неудача :( Попробуйте ввести слово ещё раз. \nПодсказка: " + hint);
             }
         } while (!userWord.equals(randomWord));
     }
