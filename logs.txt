@@ -1,0 +1,3 @@
+[2023-05-11T17:24:34.536077800]-[INFO]--This is an info message
+[2023-05-11T17:24:34.596041800]-[DEBUG]--This is a debug message
+[2023-05-11T17:25:01.133162700]-[INFO]--This is an info message
